@@ -25,4 +25,15 @@ class CarBrand extends Model
     {
         return url('/admin/car-brands/'.$this->getKey());
     }
+
+    public static function richList()
+    {
+        return CarBrand::all()
+        ->map(function($item){
+            return [
+                'id' => $item->id,
+                'name' => $item->name
+            ];
+        }); 
+    } 
 }

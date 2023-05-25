@@ -88,3 +88,18 @@ Route::middleware(['auth:' . config('admin-auth.defaults.guard'), 'admin'])->gro
         });
     });
 });
+
+/* Auto-generated admin routes */
+Route::middleware(['auth:' . config('admin-auth.defaults.guard'), 'admin'])->group(static function () {
+    Route::prefix('admin')->namespace('App\Http\Controllers\Admin')->name('admin/')->group(static function() {
+        Route::prefix('buses')->name('buses/')->group(static function() {
+            Route::get('/',                                             'BusesController@index')->name('index');
+            Route::get('/create',                                       'BusesController@create')->name('create');
+            Route::post('/',                                            'BusesController@store')->name('store');
+            Route::get('/{bu}/edit',                                    'BusesController@edit')->name('edit');
+            Route::post('/bulk-destroy',                                'BusesController@bulkDestroy')->name('bulk-destroy');
+            Route::post('/{bu}',                                        'BusesController@update')->name('update');
+            Route::delete('/{bu}',                                      'BusesController@destroy')->name('destroy');
+        });
+    });
+});

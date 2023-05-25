@@ -4,6 +4,7 @@
             <li class="nav-title">{{ trans('brackets/admin-ui::admin.sidebar.content') }}</li>
            @can('admin.car-brand')<li class="nav-item"><a class="nav-link" href="{{ url('admin/car-brands') }}"> {{ trans('admin.car-brand.title') }}</a></li>@endcan
            @can('admin.driver')<li class="nav-item"><a class="nav-link" href="{{ url('admin/drivers') }}"> {{ trans('admin.driver.title') }}</a></li>@endcan
+           @can('admin.bus')<li class="nav-item"><a class="nav-link" href="{{ url('admin/buses') }}"> {{ trans('admin.bus.title') }}</a></li>@endcan
            {{-- Do not delete me :) I'm used for auto-generation menu items --}}
 
             <li class="nav-title">{{ trans('brackets/admin-ui::admin.sidebar.settings') }}</li>

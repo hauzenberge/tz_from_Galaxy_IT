@@ -49,3 +49,38 @@ $factory->define(App\Models\Driver::class, static function (Faker\Generator $fak
         
     ];
 });
+/** @var \Illuminate\Database\Eloquent\Factory $factory */
+$factory->define(App\Models\Bus::class, static function (Faker\Generator $faker) {
+    return [
+        'bus_id' => $faker->sentence,
+        'driver_id' => $faker->sentence,
+        'created_at' => $faker->dateTime,
+        'updated_at' => $faker->dateTime,
+        
+        
+    ];
+});
+/** @var \Illuminate\Database\Eloquent\Factory $factory */
+$factory->define(App\Models\Bus::class, static function (Faker\Generator $faker) {
+    return [
+        'license_plate' => $faker->sentence,
+        'bus_id' => $faker->sentence,
+        'driver_id' => $faker->sentence,
+        'created_at' => $faker->dateTime,
+        'updated_at' => $faker->dateTime,
+        
+        
+    ];
+});
+/** @var \Illuminate\Database\Eloquent\Factory $factory */
+$factory->define(App\Models\Bus::class, static function (Faker\Generator $faker) {
+    return [
+        'license_plate' => $faker->sentence,
+        'brand_id' => $faker->sentence,
+        'driver_id' => $faker->sentence,
+        'created_at' => $faker->dateTime,
+        'updated_at' => $faker->dateTime,
+        
+        
+    ];
+});

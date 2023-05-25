@@ -63,4 +63,15 @@ class Driver extends Model
 
         return $adminUsers;
     }
+
+    public static function richList()
+    {
+        return Driver::all()
+        ->map(function($item){
+            return [
+                'id' => $item->id,
+                'name' => $item->adminUser->full_name
+            ];
+        }); 
+    } 
 }

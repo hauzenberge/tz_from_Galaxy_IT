@@ -80,5 +80,58 @@ return [
         ],
     ],
 
+    'bus' => [
+        'title' => 'Buses',
+
+        'actions' => [
+            'index' => 'Buses',
+            'create' => 'New Bus',
+            'edit' => 'Edit :name',
+        ],
+
+        'columns' => [
+            'id' => 'ID',
+            'bus_id' => 'Bus',
+            'driver_id' => 'Driver',
+            
+        ],
+    ],
+
+    'bus' => [
+        'title' => 'Buses',
+
+        'actions' => [
+            'index' => 'Buses',
+            'create' => 'New Bus',
+            'edit' => 'Edit :name',
+        ],
+
+        'columns' => [
+            'id' => 'ID',
+            'license_plate' => 'License plate',
+            'bus_id' => 'Bus',
+            'driver_id' => 'Driver',
+            
+        ],
+    ],
+
+    'bus' => [
+        'title' => 'Buses',
+
+        'actions' => [
+            'index' => 'Buses',
+            'create' => 'New Bus',
+            'edit' => 'Edit :name',
+        ],
+
+        'columns' => [
+            'id' => 'ID',
+            'license_plate' => 'License plate',
+            'brand_id' => 'Brand',
+            'driver_id' => 'Driver',
+            
+        ],
+    ],
+
     // Do not delete me :) I'm used for auto-generation
 ];
