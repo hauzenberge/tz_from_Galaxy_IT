@@ -63,5 +63,22 @@ return [
         ],
     ],
 
+    'driver' => [
+        'title' => 'Drivers',
+
+        'actions' => [
+            'index' => 'Drivers',
+            'create' => 'New Driver',
+            'edit' => 'Edit :name',
+        ],
+
+        'columns' => [
+            'id' => 'ID',
+            'admin_user_id' => 'Admin user',
+            'birthday' => 'Birthday',
+            
+        ],
+    ],
+
     // Do not delete me :) I'm used for auto-generation
 ];

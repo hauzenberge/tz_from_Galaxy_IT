@@ -27,7 +27,7 @@ class UpdateRole extends FormRequest
     {
         return [
             'name' => ['sometimes', Rule::unique('roles', 'name')->ignore($this->role->getKey(), $this->role->getKeyName()), 'string'],
-            'guard_name' => ['sometimes', Rule::unique('roles', 'guard_name')->ignore($this->role->getKey(), $this->role->getKeyName()), 'string'],
+            'guard_name' => ['sometimes', 'string'],
             
             'permissions' => ['sometimes', 'array']
 
