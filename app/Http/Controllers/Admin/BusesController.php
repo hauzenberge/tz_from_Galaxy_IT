@@ -22,6 +22,7 @@ use Illuminate\View\View;
 
 use App\Models\CarBrand;
 use App\Models\Driver;
+use Illuminate\Support\Facades\Auth;
 
 class BusesController extends Controller
 {
@@ -48,6 +49,7 @@ class BusesController extends Controller
             function ($query) use ($request) {
                 $query->with(['brand']);
                 $query->with(['driver']);
+
 
                 if ($request->has('brand_id')) {
                     $query->where('brand_id', $request->brand_id);

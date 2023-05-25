@@ -20,6 +20,8 @@ use Illuminate\Routing\Redirector;
 use Illuminate\Support\Facades\DB;
 use Illuminate\View\View;
 
+use Illuminate\Support\Facades\Auth;
+
 class DriversController extends Controller
 {
 
@@ -44,9 +46,15 @@ class DriversController extends Controller
 
             function ($query) use ($request) {
                 $query->with(['adminUser']);
-    
+                $user = Auth::user();
+
+              //  dd($user->roles[0]->name);
+                if ($user->roles[0]->name == "Driver" ) {
+                    $query->where("admin_user_id", $user->id);
+                }
             }
         );
+
 
         if ($request->ajax()) {
             if ($request->has('bulk')) {
