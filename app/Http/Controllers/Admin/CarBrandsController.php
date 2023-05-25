@@ -37,7 +37,7 @@ class CarBrandsController extends Controller
             $request,
 
             // set columns to query
-            ['id'],
+            ['id', 'name'],
 
             // set columns to searchIn
             ['id', 'name']
